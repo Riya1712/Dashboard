@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-blue-900 text-white p-5 hidden md:block">
+            <h1 class="text-2xl font-bold mb-6">Dashboard</h1>
+            <ul>
+                <li class="mb-4 flex items-center"><i class="fas fa-home mr-2"></i><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li class="mb-4 flex items-center"><i class="fas fa-chart-line mr-2"></i><a href="#" class="hover:text-gray-300">Analytics</a></li>
+                <li class="mb-4 flex items-center"><i class="fas fa-cogs mr-2"></i><a href="#" class="hover:text-gray-300">Settings</a></li>
+                <li class="mb-4 flex items-center"><i class="fas fa-users mr-2"></i><a href="#" class="hover:text-gray-300">Users</a></li>
+                <li class="mb-4 flex items-center"><i class="fas fa-file-invoice-dollar mr-2"></i><a href="#" class="hover:text-gray-300">Billing</a></li>
+            </ul>
+        </div>
+        
+        <div class="flex-1 flex flex-col">
+            <!-- Top Navbar -->
+            <nav class="bg-white p-4 shadow-md flex justify-between items-center">
+                <button class="md:hidden bg-blue-900 text-white p-2 rounded">☰</button>
+                <div class="flex items-center space-x-4">
+                    <input type="text" placeholder="Search..." class="p-2 border rounded-lg">
+                    <i class="fas fa-bell text-gray-700"></i>
+                    <i class="fas fa-envelope text-gray-700"></i>
+                    <i class="fas fa-user-circle text-gray-700 text-2xl"></i>
+                </div>
+            </nav>
+            
+            <!-- Main Content -->
+            <main class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Cards -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-lg font-semibold">Revenue</h3>
+                    <p class="text-3xl font-bold text-green-600">$12,345</p>
+                    <p class="text-gray-500">Updated just now</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-lg font-semibold">Users</h3>
+                    <p class="text-3xl font-bold text-blue-600">1,234</p>
+                    <p class="text-gray-500">Active users this week</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-lg font-semibold">Sales</h3>
+                    <p class="text-3xl font-bold text-red-600">567</p>
+                    <p class="text-gray-500">Completed transactions</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+                    <h3 class="text-lg font-semibold">Feedback</h3>
+                    <p class="text-3xl font-bold text-yellow-600">85%</p>
+                    <p class="text-gray-500">Positive customer reviews</p>
+                </div>
+            </main>
+            
+            <!-- Charts & Tables Section -->
+            <section class="p-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold">Sales Overview</h3>
+                    <p class="mt-2 text-gray-500">Sales trends for the past few months, showing growth in January and consistent performance in other months.</p>
+                    <svg width="100%" height="200">
+                        <rect x="10" y="80" width="30" height="120" fill="#4CAF50" />
+                        <rect x="50" y="120" width="30" height="80" fill="#4CAF50" />
+                        <rect x="90" y="60" width="30" height="140" fill="#4CAF50" />
+                        <rect x="130" y="100" width="30" height="100" fill="#4CAF50" />
+                        <rect x="170" y="50" width="30" height="150" fill="#4CAF50" />
+                    </svg>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-lg font-semibold mb-4">Recent Transactions</h3>
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr>
+                                <th class="border-b p-2">User</th>
+                                <th class="border-b p-2">Amount</th>
+                                <th class="border-b p-2">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="p-2">John Doe</td>
+                                <td class="p-2">$500</td>
+                                <td class="p-2 text-green-600">Completed</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Jane Smith</td>
+                                <td class="p-2">$350</td>
+                                <td class="p-2 text-yellow-600">Pending</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2">Emily Brown</td>
+                                <td class="p-2">$750</td>
+                                <td class="p-2 text-red-600">Failed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
